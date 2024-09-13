@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('username')->unique();
             $table->string('password');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('type')->references('id')->on('user_type');
             $table->string('type');
             $table->rememberToken();
             $table->timestamps();
