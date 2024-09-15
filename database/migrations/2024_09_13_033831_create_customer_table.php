@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('contact_person');
             $table->string('contact_number');
             $table->decimal('credit_limit', total: 8, places: 2);
-            $table->foreign('term_id')->references('id')->on('terms');
+            $table->foreignId('term_id')->references('id')->on('terms');
             $table->string('tin');
             //columns for reward/gifts purposes
             $table->boolean('with_reward'); 

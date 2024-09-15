@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('supplier');
             $table->string('address');
             $table->string('contact_person');
-            $table->string('telephone_number');
-            $table->string('cellphone_number');
-            $table->string('fax_number');
-            $table->foreign('term_id')->references('id')->on('terms');
+            $table->string('telephone_number', length: 15);
+            $table->string('cellphone_number', length: 15);
+            $table->string('fax_number', length: 15);
+            $table->foreignId('term_id')->references('id')->on('terms');
             $table->string('tin');
             $table->boolean('status');
         });

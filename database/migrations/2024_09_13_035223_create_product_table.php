@@ -19,10 +19,11 @@ return new class extends Migration
             $table->string('alias');
             $table->string('generic_name');
             $table->string('category');
-            $table->foreign('default_supplier_id')->references('id')->on('supplier');
+            $table->foreignId('default_supplier_id')->references('id')->on('supplier');
             $table->decimal('cost', total: 8, places: 2);
             $table->decimal('mark_up', total: 8, places: 2);
             $table->decimal('price', total: 8, places: 2);
+            $table->foreignId('unit_id')->references('id')->on('item_unit');
             $table->string('image_path');
             $table->double('reorder_quantity');
             $table->double('onhand_quantity');
