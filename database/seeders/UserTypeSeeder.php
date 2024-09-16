@@ -16,10 +16,10 @@ class UserTypeSeeder extends Seeder
     {
         //
         $user_type = [
-            ['id' => 1, 'description' => 'Admin'],
-            ['id' => 2, 'description' => 'Sales'],
-            ['id' => 3, 'description' => 'Purchasing'],
-            ['id' => 4, 'description' => 'Accounting'],
+            ['id' => 1, 'type' => 'Administrator'],
+            ['id' => 2, 'type' => 'Sales'],
+            ['id' => 3, 'type' => 'Purchasing'],
+            ['id' => 4, 'type' => 'Accounting'],
         ];
 
         foreach ($user_type as $type)

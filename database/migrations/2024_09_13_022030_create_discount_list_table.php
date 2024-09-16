@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('discount_list', function (Blueprint $table)
+        Schema::create('discounts', function (Blueprint $table)
         {
             $table->id();
             $table->string("discount" , length: 30);
             $table->decimal('discount_rate', total: 8, places: 2);
             $table->boolean("is_date_scheduled");
-            $table->dateTime("date_start");
-            $table->dateTime("date_end");
+            $table->dateTime("date_start")->nullable();
+            $table->dateTime("date_end")->nullable();
             $table->boolean("is_time_scheduled");
-            $table->dateTime("time_start");
-            $table->dateTime("time_end");
+            $table->dateTime("time_start")->nullable();
+            $table->dateTime("time_end")->nullable();
             $table->boolean("day_mon");
             $table->boolean("day_tue");
             $table->boolean("day_wed");
@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('discount_list');
+        Schema::dropIfExists('discounts');
     }
 };

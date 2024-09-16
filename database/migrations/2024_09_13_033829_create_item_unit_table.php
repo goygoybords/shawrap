@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('item_unit', function (Blueprint $table) {
+        Schema::create('item_units', function (Blueprint $table) {
             $table->id();
-            $table->string('unit', length: 30);
+            $table->string('unit', length: 8);
         });
     }
 
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('item_unit');
+        Schema::dropIfExists('item_units');
     }
 };

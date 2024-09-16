@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('user_types', function (Blueprint $table)
         {
             $table->id();
-            $table->string('description', length: 30);
+            $table->string('type', length: 15);
         });
     }
 

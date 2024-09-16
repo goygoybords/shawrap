@@ -18,10 +18,11 @@ class PayTypeSeeder extends Seeder
             ['id' => 2, 'pay_type' => 'Check'],
             ['id' => 3, 'pay_type' => 'Credit Card'],
             ['id' => 4, 'pay_type' => 'Gift Certificate'],
-            ['id' => 7, 'pay_type' => 'Exchange'],
-            ['id' => 8, 'pay_type' => 'Rewards'],
-            ['id' => 11, 'pay_type' => 'Charge'],
-            ['id' => 12, 'pay_type' => 'Others'],
+            ['id' => 5, 'pay_type' => 'Exchange'],
+            ['id' => 6, 'pay_type' => 'Rewards'],
+            ['id' => 7, 'pay_type' => 'Charge'],
+            ['id' => 8, 'pay_type' => 'Gcash'],
+            ['id' => 9, 'pay_type' => 'Others'],
         ];
 
         foreach ($pay_type as $type)

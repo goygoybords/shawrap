@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('terms', function (Blueprint $table)
         {
             $table->id();
-            $table->string('term', length: 20);
+            $table->string('term', length: 15);
             $table->decimal('number_of_days', total: 2, places: 2);
         });
     }

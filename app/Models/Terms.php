@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PayType extends Model
+class Terms extends Model
 {
     use HasFactory;
 
     public $timestamps = false;
-    protected $fillable = ['id', 'pay_type'];
+    protected $fillable = ['term', 'number_of_days'];
 }
